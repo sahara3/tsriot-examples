@@ -57,3 +57,8 @@ typings/
 # dotenv environment variables file
 .env
 
+# tsriot build files for this project.
+build/
+/*/app.js
+/*/*-tag.ts
+/*/src/*-tag.ts

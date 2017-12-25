@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+
+  <head>
+    <title>Timer</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <style type="text/css">
+      body {
+        font-family: 'myriad pro', sans-serif;
+        font-size: 20px;
+        border: 0;
+        background: rgba(64, 139, 194, .2);
+        margin: 0;
+        padding: 100px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <timer></timer>
+
+    <script src="node_modules/riot/riot.js"></script>
+    <script src="app.js"></script>
+
+    <!-- mount this app -->
+    <script>
+      riot.mount('timer', { start: 0 });
+    </script>
+  </body>
+
+</html>
