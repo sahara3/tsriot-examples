@@ -1,9 +1,9 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html>
   <head>
-    <title>ToDo App</title>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ToDo App</title>
     <style type="text/css">
       body {
         font-family: 'myriad pro', sans-serif;
@@ -14,16 +14,12 @@
         border-width: 1px;
       }
     </style>
-
   </head>
-
   <body>
-
     <todo></todo>
 
     <script src="node_modules/riot/riot.js"></script>
-    <script src="app.js"></script>
-
+    <script src="build/bundle.js"></script>
     <script>
       riot.mount('todo', {
           title: 'I want to behave!',
@@ -35,6 +31,5 @@
           ]
       })
     </script>
-
   </body>
 </html>

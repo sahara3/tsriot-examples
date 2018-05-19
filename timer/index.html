@@ -1,9 +1,9 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-
   <head>
-    <title>Timer</title>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Timer</title>
     <style type="text/css">
       body {
         font-family: 'myriad pro', sans-serif;
@@ -15,14 +15,11 @@
       }
     </style>
   </head>
-
   <body>
     <timer></timer>
 
     <script src="node_modules/riot/riot.js"></script>
-    <script src="app.js"></script>
-
-    <!-- mount this app -->
+    <script src="build/bundle.js"></script>
     <script>
       riot.mount('timer', { start: 0 });
     </script>

@@ -1,23 +1,22 @@
 import * as tsriot from 'tsriot';
 
-class TimerTagOpts {
+interface TimerTagOpts {
     start?: number;
 }
 
 class TimerTag extends tsriot.Tag<TimerTagOpts> {
-    time: number;
+    private time: number;
 
-    init() {
+    init(): void {
         this.time = this.opts.start || 0;
 
-        var timer = setInterval(this.tick.bind(this), 1000);
-        this.on('unmount', function() {
-            clearInterval(timer)
+        const timer = setInterval(this.tick.bind(this), 1000);
+        this.on('unmount', () => {
+            clearInterval(timer);
         });
     }
 
-    tick() {
-        // 'this' should be bound with TimerTag instance.
-        this.update({ time: ++this.time })
+    private tick(): void {
+        this.update({ time: ++this.time });
     }
 }

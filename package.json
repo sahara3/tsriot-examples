@@ -1,0 +1,28 @@
+{
+  "name": "tsriot-examples",
+  "version": "0.0.1",
+  "description": "tsriot examples.",
+  "scripts": {
+    "build": "npm-run-all build:hello-world build:live-filtering build:observables build:timer build:todo-app",
+    "build:hello-world": "cd hello-world && npm run build",
+    "build:live-filtering": "cd live-filtering && npm run build",
+    "build:observables": "cd observables && npm run build",
+    "build:timer": "cd timer && npm run build",
+    "build:todo-app": "cd todo-app && npm run build",
+    "start": "http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sahara3/tsriot-examples.git"
+  },
+  "author": "sahara3 <soichiro.sahara@gmail.com> (https://github.com/sahara3)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sahara3/tsriot-examples/issues"
+  },
+  "homepage": "https://github.com/sahara3/tsriot-examples#readme",
+  "devDependencies": {
+    "http-server": "^0.11",
+    "npm-run-all": "^4"
+  }
+}

@@ -1,24 +1,20 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-
   <head>
-    <title>Live filtering</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Live filtering</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/normalize/3.0.3/normalize.css">
   </head>
-
   <body>
     <app></app>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.min.js"></script>
     <script src="node_modules/riot/riot.js"></script>
-    <script src="app.js"></script><!-- includes all tags. -->
-
-    <!-- mount this app -->
+    <script src="build/bundle.js"></script>
     <script>
       riot.mount('app');
     </script>
   </body>
-
 </html>

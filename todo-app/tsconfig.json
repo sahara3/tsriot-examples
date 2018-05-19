@@ -2,32 +2,28 @@
   "compilerOptions": {
     "target": "es6",
     "module": "es6",
-    "baseUrl": "./src",
+    "baseUrl": ".",
     "outDir": "./build",
-
     /* Strict Type-Checking Options */
     "strict": true,
-    "noImplicitAny": false,
-    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "strictNullChecks": false,
     "strictFunctionTypes": true,
-    "noImplicitThis": false,
+    "noImplicitThis": true,
     "alwaysStrict": true,
-    
     /* Additional Checks */
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": false,
-    
     /* Module Resolution Options */
     "moduleResolution": "node",
-    
     /* Source Map Options */
     "sourceMap": true,
     "inlineSourceMap": false,
     "inlineSources": false
   },
   "files": [
-    "src/todo-tag.ts"
+    "build/todo.ts"
   ]
 }

@@ -1,12 +1,11 @@
 <app>
-
   <header>
-    <input type="search" value={ keyword } onkeyup={ keyup } placeholder="search">
+    <input type="search" value="{ keyword }" onkeyup="{ keyup }" placeholder="search">
   </header>
 
-  <currency each={ filtered.slice(0, max) } title={ title } price={ price } />
+  <currency each="{ filtered.slice(0, max) }" title="{ title }" price="{ price }" />
 
-  <footer if={ filtered.length > max }>
+  <footer if="{ filtered.length > max }">
     and { filtered.length - max } more currencies
   </footer>
 
@@ -42,5 +41,4 @@
       box-shadow: 0 1px 5px rgba(0,0,0,.3);
     }
   </style>
-
 </app>

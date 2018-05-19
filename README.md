@@ -3,7 +3,7 @@ This is a series of examples using [tsriot](https://github.com/sahara3/tsriot).
 
 Some of examples are created with reference to [Riot examples](https://github.com/riot/examples).
 
-All examples can be complied and run by following commands.
+All examples can be complied and run by following commands in its directory.
 ```sh
 npm run build
 npm start

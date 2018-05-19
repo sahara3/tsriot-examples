@@ -6,11 +6,11 @@ export class Car extends tsriot.Observable {
     started: boolean;
 
     constructor(make: string, model: string) {
-    	super();
+        super();
         this.started = false;
 
-        this.on('start', function() {
+        this.on('start', () => {
             this.started = true;
-        }.bind(this));
+        });
     }
 }

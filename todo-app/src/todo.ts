@@ -14,50 +14,48 @@ class TodoItem {
     }
 }
 
-class TodoTagOpts {
+interface TodoTagOpts {
     title: string;
-    items: Array<TodoItem>;
+    items: TodoItem[];
 }
 
 class TodoTag extends tsriot.Tag<TodoTagOpts> {
-    items: Array<TodoItem>;
+    items: TodoItem[];
 
     text: string;
 
-    init() {
+    init(): void {
         this.items = this.opts.items || [];
     }
 
-    edit(event: tsriot.DomEvent) {
-        this.text = (<HTMLInputElement>event.target).value;
+    edit(event: tsriot.DomEvent): void {
+        this.text = (event.target as HTMLInputElement).value;
     }
 
-    add(event: tsriot.DomEvent) {
+    add(event: tsriot.DomEvent): void {
         if (this.text) {
             this.items.push(new TodoItem(this.text));
             this.text = '';
-            (<HTMLInputElement>this.refs.input).value = '';
+            (this.refs.input as HTMLInputElement).value = '';
         }
         event.preventDefault();
     }
 
-    removeAllDone(event: tsriot.DomEvent) {
-        this.items = this.items.filter(function(item) {
-            return !item.done;
-        });
+    removeAllDone(event: tsriot.DomEvent): void {
+        this.items = this.items.filter((item): boolean => !item.done);
     }
 
     // an two example how to filter items on the list
-    whatShow(item: TodoItem) {
+    whatShow(item: TodoItem): boolean {
         return !item.hidden;
     }
 
-    onlyDone(item: TodoItem) {
+    onlyDone(item: TodoItem): boolean {
         return item.done;
     }
 
-    toggle(event: tsriot.DomEvent) {
-        var item = <TodoItem>event.item;
+    toggle(event: tsriot.DomEvent): boolean {
+        const item = event.item as TodoItem;
         item.done = !item.done;
         return true;
     }
